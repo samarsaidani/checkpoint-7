@@ -1,0 +1,121 @@
+
+
+
+
+PROCEDURE dot_product(var v1,V2: ARRAY)
+VAR
+    i,j,ps,N : integer ;
+
+BEGIN
+    write("donner taille de vecteur ");
+    read(N);
+    writre("donner les valeurs de vecteur ");
+    read(v1);
+    read(V2);
+    FOR i FROM 0 TO N STEP step  DO
+        ps:=ps+v1[i]*V2[i];
+    END_FOR
+     IF (ps=0) THEN
+       
+        write ("vecteur orthogonaux");
+     else 
+    
+     write ("vecteur se sont pas orthogonaux")
+
+    END_IF
+
+END
+
+
+
+
+
+
+
+ALGORITHM orthogonaux
+VAR
+    
+    v1,V2:ARRAY_OF integer[5];
+    
+BEGIN
+
+     dot_product (v1,V2)
+   
+END
+
+
+
+ALGORITHM orthogonaux2
+VAR
+    test:integer ;
+    
+BEGIN
+    test:= dot_product(v1,v2) 
+    
+    IF (test= 0) THEN
+          write ("vecteur orthogonaux");
+           else 
+             write ("vecteur se sont pas orthogonaux")
+    END_IF
+
+END
+
+FUNCTION dot_product(v1,v2:array) : integer 
+VAR
+    
+BEGIN
+      write("donner taille de vecteur ");
+    read(N);
+    writre("donner les valeurs de vecteur ");
+    read(v1);
+    read(V2);
+    FOR i FROM 0 TO N STEP step  DO
+        ps:=ps+v1[i]*V2[i];
+    END_FOR
+    RETURN ps ;
+END
+
+
+ALGORITHM sommetab
+VAR
+    jeu1: ARRAY_OF integer{3,1,7,9};
+    jeu2: ARRAY_OF integer{2,4,1,9,3}
+    somme:integer:=0;
+    i,j:integer ;
+    test:BOOLEAN;
+BEGIN
+  
+    FOR i FROM 0 TO jeu1.lenght-1 STEP step  DO
+      test:=false ;
+        FOR j FROM 0 TO jeu2.lenght_1 STEP step  DO
+             IF (jeu1[i]=jeu2[j]) THEN
+                test:=true ;
+            END_IF
+        END_FOR     
+            
+            IF (test=false) THEN
+                 somme:=somme+jeu1[i];
+              END_IF
+      
+    END_FOR
+
+     FOR j FROM 0 TO jeu2.lenght-1 STEP step  DO
+      test:=false ;
+        FOR i FROM 0 TO jeu1.lenght_1 STEP step  DO
+             IF (jeu2[J]=jeu1[I]) THEN
+                test:=true ;
+            END_IF
+        END_FOR     
+            
+            IF (test=false) THEN
+                 somme:=somme+jeu2[j];
+              END_IF
+      
+    END_FOR
+
+
+END
+
+
+
+
